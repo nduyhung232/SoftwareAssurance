@@ -1,0 +1,917 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>DEMO | AMIS.VN</title>
+    <link href="/Css/Lib/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/Css/Lib/jquery-ui.css" rel="stylesheet"/>
+    <link href="/Css/Common/Common.css" rel="stylesheet"/>
+    <link href="/Css/Common/sidebar.css" rel="stylesheet"/>
+    <link href="/Css/Common/header.css" rel="stylesheet"/>
+    <link href="/Css/Dictionary/Employee.css" rel="stylesheet"/>
+    <link href="/Css/Dictionary/Datagrid.css" rel="stylesheet"/>
+    <link href="/Css/Dictionary/AddEmployee.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Phần chung -->
+<div class="wrap">
+    <!-- Phần header gồm 2 mục là header left và header right -->
+    <div id="header" class="d-flex flex-row">
+        <!-- Dưới đây là phần headerleft -->
+        <div id="header-left" class="d-flex flex-row">
+            <div id="h-icon-toogle" class="">
+
+            </div>
+            <div id="h-icon-logo" class="">
+
+            </div>
+            <div id="h-icon-show" class="">
+
+            </div>
+        </div>
+        <!-- Kết thúc phần header left -->
+        <!-- Bắt đầu viết Header right gồm 2 phần  -->
+        <div id="header-right" class="d-flex flex-row">
+            <!-- phần có độ rộng bằng 3 là phần form search -->
+            <div class="col-md-3 no-space">
+                <div id="form-search">
+                    <div class="input-group">
+                        <div class="input-group-prepend icon-search">
+                        </div>
+                        <input type="text" class="form-control" id="input-search" placeholder="Tìm kiếm nhanh...">
+                        <div class="input-group-append icon-setting"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kết thúc form search -->
+            <!-- Bắt đầu viết phần bên phải có độ rộng 9 bao các thành phần -->
+            <div class="col-md-9 d-flex flex-row no-space" style="height:44px;">
+                <!-- Phần khoảng trống -->
+                <div class="col-md-6" style="height:44px;"></div>
+                <!-- Nút quay lại phiên bản, thông báo và đăng nhập  -->
+                <div class="col-md-6 d-flex flex-row no-space" style="height:44px;line-height:44px">
+                    <div class="col-md-5" style="height:44px;">
+                        <button class="back-version btn btn-block" width="">Làm việc với phiên bản cũ</button>
+                    </div>
+                    <div class="col-md-3 text-white text-center">R33.18</div>
+                    <!-- Hết phần phiên bản -->
+                    <div class="col-md-1" id="notification"></div>
+                    <!-- Phần đăng nhập -->
+                    <div class="col-md-3 d-flex flex-row no-space ">
+                        <div class="avatar"></div>
+                        <div class="username position-absolute" style="right:12px;">Quốc Hùng Ptit</div>
+                    </div>
+                </div>
+                <!-- hết phiên bản,thông báo và đăng nhập -->
+
+            </div>
+            <!-- hết các thành phần bên phải -->
+        </div>
+        <!-- Kết thúc phần header right -->
+    </div>
+    <!-- Kết thúc phần header  -->
+    <!-- Phần content gồm 2 phần là Sidebar và content -->
+    <div id="content" class="d-flex flex-row">
+        <!-- Phần sidebar -->
+        <div id="sidebar" class="position-absolute">
+            <div id="sidebar-content" class="flex-column">
+                <div class="sidebar-item d-flex flex-row"
+                     style=" background:#014D8B;line-height:40px;color:#fff;">
+                    <div class="sidebar-item-logo logo-item-1"></div>
+                    <div class="sidebar-item-title  align-items-center">Bàn làm việc</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-2"></div>
+                    <div class="sidebar-item-title  align-items-center">Hồ sơ nhân viên</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-3"></div>
+                    <div class="sidebar-item-title  align-items-center">Lương - Thuế - Bảo hiểm</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-4"></div>
+                    <div class="sidebar-item-title  align-items-center">Tuyển dụng -Tiếp nhận</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-5"></div>
+                    <div class="sidebar-item-title  align-items-center">Khen thưởng - Sự cố</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-6"></div>
+                    <div class="sidebar-item-title  align-items-center">Đào tạo - Phúc lợi</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-6"></div>
+                    <div class="sidebar-item-title  align-items-center">Thủ tục</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class=" sidebar sidebar-item-title align-items-center" id="category-item">BÁO CÁO</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-8"></div>
+                    <div class="sidebar-item-title  align-items-center">Báo cáo</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-9"></div>
+                    <div class="sidebar-item-title  align-items-center">Báo cáo nhanh</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-title  align-items-center" id="category-item">TIỆN ÍCH</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-10"></div>
+                    <div class="sidebar-item-title  align-items-center">Danh bạ</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-11"></div>
+                    <div class="sidebar-item-title  align-items-center">Lịch sử Email/SMS</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-12"></div>
+                    <div class="sidebar-item-title  align-items-center">Thùng rác</div>
+                </div>
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-title  align-items-center" id="category-item">Cấu Hình</div>
+                </div>
+
+                <div class="sidebar-item d-flex flex-row">
+                    <div class="sidebar-item-logo logo-item-14"></div>
+                    <div class="sidebar-item-title  align-items-center">Hệ thống</div>
+                </div>
+            </div>
+        </div>
+        <!-- Phần Content -->
+        <div class="content-wrap position-absolute">
+            <!-- Content phần List Employee -->
+            <div class="content-list">
+                <!-- Phần block 1 -->
+                <div class="col-md-12 bg-white no-space">
+                    <div class="bread-cum d-flex">
+                        <div class=" col-md-7 d-flex flex-row pd-l-2">
+                            <div class="main-breadcum">Hồ sơ nhân viên</div>
+                            <div class="icon-arrow-right"></div>
+                            <div class="small-breadcum">Hồ sơ</div>
+                        </div>f
+                        <div class="col-md-5 d-flex flex-row no-space">
+                            <div class="col-md-6 d-flex flex-row ml-auto company-box no-space">
+                                <div class="company-icon"></div>
+                                <input type="text" class="company-name" value="Công ty cổ phần ABC"/>
+                                <div class="icon-arrow-down ml-auto"></div>
+                            </div>
+                            <div class="col-md-4 d-flex flex-row status-bar no-space">
+                                <!--<input type="text" class="company-name pd-2" value="Đang làm việc" />-->
+                                <div class="d-flex flex-row status-header">
+                                    <input type="text" name="status-job" class="company-name pd-2" value="Đang làm việc"
+                                           id="show-status-header"/>
+                                    <div class="icon-arrow-down" id="btn-status-header"></div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-2 no-space d-flex flex-row style-view">
+                                <div class="icon-view-list pd-l-1 pd-r-1"></div>
+                                <div class="icon-view-card pd-l-1 pd-r-1 "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kết thúc block1 Bắt đầu vẽ toolbar -->
+                <div class="col-md-12 no-space">
+                    <div class="toolbar d-flex flex-row">
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-add"
+                             tabindex="1">
+                            <div class="btn-action-icon icon-add"></div>
+                            <div class="btn-action-title">Thêm</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center"
+                             id="btn-view-edit" tabindex="2">
+                            <div class="btn-action-icon icon-view-edit"></div>
+                            <div class="btn-action-title">Xem và Sửa</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center"
+                             id="btn-delete" tabindex="3">
+                            <div class="btn-action-icon icon-delete"></div>
+                            <div class="btn-action-title">Xóa</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-print"
+                             tabindex="4">
+                            <div class="btn-action-icon icon-print"></div>
+                            <div class="btn-action-title">In</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-add-config"
+                             tabindex="5">
+                            <div class="btn-action-icon icon-email"></div>
+                            <div class="btn-action-title">Them Cau Hinh</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center"
+                             id="btn-report" tabindex="6">
+                            <div class="btn-action-icon icon-report"></div>
+                            <div class="btn-action-title">Báo cáo</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center"
+                             id="btn-refresh" tabindex="7">
+                            <div class="btn-action-icon icon-refresh"></div>
+                            <div class="btn-action-title">Nạp</div>
+                            <div class="btn-action-icon icon-arrow-down"></div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-tool"
+                             tabindex="8">
+                            <div class="btn-action-icon icon-tool"></div>
+                            <div class="btn-action-title">Tiện ích</div>
+                            <div class="btn-action-icon icon-arrow-down"></div>
+                        </div>
+                        <div class="toolbar-line">|</div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-reply"
+                             tabindex="9">
+                            <div class="btn-action-icon icon-reply"></div>
+                            <div class="btn-action-title">Phản hồi</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-help"
+                             tabindex="10">
+                            <div class="btn-action-icon icon-help"></div>
+                            <div class="btn-action-title">Giúp</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kết thúc toolbar , bắt đầu data-content -->
+
+            </div>
+            <div class="data-content">
+                <!--space top -->
+                <div class="col-md-12 no-space space-grid"></div>
+                <!-- Data table -->
+                <div class="col-md-12 no-space grid-content">
+                    <!-- Header table -->
+                    <!-- CSS table được viết trong datagrid.css -->
+                    <table id="demo-table" class="bordered cellpadding-0 cellspacing-0 table table-striped"
+                           recordId="EmployeeID" style="margin-top:-2px;">
+                        <thead>
+                        <tr>
+                            <th class="thead-sticky" id='column-header-1'>
+                                <div class="d-flex flex-row grid-header-thead">
+                                    <div class="icon-pin"></div>
+                                    <div class="column-title" dataTitle="cmt" dataType="string">CMT</div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="btn-filter" tabindex="11">*</div>
+                                    <div class="input-filter d-flex flex-row">
+                                        <input type="text" tabindex="12"/>
+                                        <div class="icon-arrow-down"></div>
+                                    </div>
+                                </div>
+                                <div id='column-header-1-sizer'></div>
+                            </th>
+                            <th class="thead-sticky" id='column-header-2'>
+                                <div class="d-flex flex-row grid-header-thead">
+                                    <div class="icon-pin"></div>
+                                    <div class="column-title" dataTitle="hoten" dataType="string">Họ và tên</div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="btn-filter" tabindex="13">*</div>
+                                    <div class="input-filter d-flex flex-row">
+                                        <input type="text" tabindex="14"/>
+                                        <div class="icon-arrow-down"></div>
+                                    </div>
+                                </div>
+                                <div id='column-header-2-sizer'></div>
+                            </th>
+                            <th class="thead-sticky" id='column-header-3'>
+                                <div class="d-flex flex-row grid-header-thead" auto="gender">
+                                    <div class="icon-pin"></div>
+                                    <div class="column-title" dataTitle="gioitinh" dataType="boolean">Giới tính</div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="btn-filter" tabindex="15">*</div>
+                                    <div class="input-filter d-flex flex-row">
+                                        <input type="text" tabindex="16"/>
+                                        <div class="icon-arrow-down"></div>
+                                    </div>
+                                </div>
+                                <div id='column-header-3-sizer'></div>
+                            </th>
+                            <th class="thead-sticky" id='column-header-4'>
+                                <div class="d-flex flex-row grid-header-thead">
+                                    <div class="icon-pin"></div>
+                                    <div class="column-title" dataTitle="ngaysinh" dataType="date">Ngày sinh</div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="btn-filter" tabindex="17">*</div>
+                                    <div class="input-filter d-flex flex-row">
+                                        <input type="text" tabindex="18"/>
+                                    </div>
+                                </div>
+                                <div id='column-header-4-sizer'></div>
+                            </th>
+                            <th class="thead-sticky" id='column-header-5'>
+                                <div class="d-flex flex-row grid-header-thead">
+                                    <div class="icon-pin"></div>
+                                    <div class="column-title" dataTitle="dienthoai" dataType="string">Điện thoại</div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="btn-filter" tabindex="19">*</div>
+                                    <div class="input-filter d-flex flex-row">
+                                        <input type="text" tabindex="20"/>
+                                        <div class="icon-arrow-down"></div>
+                                    </div>
+                                </div>
+                                <div id='column-header-5-sizer'></div>
+                            </th>
+                            <th class="thead-sticky" id='column-header-6'>
+                                <div class="d-flex flex-row grid-header-thead">
+                                    <div class="icon-pin"></div>
+                                    <div class="column-title" dataTitle="email" dataType="string">Email</div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="btn-filter" tabindex="21">*</div>
+                                    <div class="input-filter d-flex flex-row">
+                                        <input type="text" tabindex="22"/>
+                                        <div class="icon-arrow-down"></div>
+                                    </div>
+                                </div>
+                                <div id='column-header-6-sizer'></div>
+                            </th>
+                            <th class="thead-sticky" id='column-header-7'>
+                                <div class="d-flex flex-row grid-header-thead">
+                                    <div class="icon-pin"></div>
+                                    <div class="column-title" dataTitle="ngaythamgia" dataType="string">Ngày tham gia
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="btn-filter" tabindex="23">*</div>
+                                    <div class="input-filter d-flex flex-row">
+                                        <input type="text" tabindex="24"/>
+                                        <div class="icon-arrow-down"></div>
+                                    </div>
+                                </div>
+                                <div id='column-header-7-sizer'></div>
+                            </th>
+                            <th class="thead-sticky" id='column-header-8'>
+                                <div class="d-flex flex-row grid-header-thead">
+                                    <div class="icon-pin"></div>
+                                    <div class="column-title" dataTitle="tongTien" dataType="string">Tổng tiền</div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="btn-filter" tabindex="25">*</div>
+                                    <div class="input-filter d-flex flex-row">
+                                        <input type="text" tabindex="26"/>
+                                        <div class="icon-arrow-down"></div>
+                                    </div>
+                                </div>
+                                <div id='column-header-8-sizer'></div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <!-- End table -->
+
+                </div>
+                <!-- Phần Summary -->
+                <div class="d-flex col-md-12 no-space total-record">
+                    <div class="">Tổng số: <strong>561</strong> bản ghi</div>
+                    <div class="position-absolute split-btn" style="left:50%;"></div>
+                </div>
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <!-- Phần tab info -->
+                <div class="col-md-12 no-space tab-detail">
+                    <div class="nav nav-tabs tab-detail-list" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-general-tab" data-toggle="tab"
+                           href="#nav-general-info" role="tab" aria-controls="nav-home" aria-selected="true">1. THÔNG
+                            TIN CHUNG</a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                           role="tab" aria-controls="nav-contact" aria-selected="false">2. THÔNG TIN LIÊN HỆ</a>
+                        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                           aria-controls="nav-contact" aria-selected="false">3. GIA ĐÌNH</a>
+                        <a class="nav-item nav-link" id="nav-invoice-tab" data-toggle="tab" href="#nav-contact"
+                           role="tab" aria-controls="nav-contact" aria-selected="false">4. HỢP ĐỒNG LAO ĐỘNG</a>
+                        <a class="nav-item nav-link" id="nav-progress-tab" data-toggle="tab" href="#nav-contact"
+                           role="tab" aria-controls="nav-contact" aria-selected="false">5. QUÁ TRÌNH CÔNG TÁC</a>
+                        <a class="nav-item nav-link" id="nav-salary-tab" data-toggle="tab" href="#nav-contact"
+                           role="tab" aria-controls="nav-contact" aria-selected="false">6. THU NHẬP THƯỜNG XUYÊN</a>
+                        <a class="nav-item nav-link" id="nav-sub-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                           aria-controls="nav-contact" aria-selected="false">7. KHẤU TRỪ THƯỜNG XUYÊN</a>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <!-- Tab thông tin chung -->
+                        <div class="tab-pane fade show active" id="nav-general-info" role="tabpanel"
+                             aria-labelledby="nav-home-tab">
+                            <div class="col-md-12 d-flex no-space" style="height:250px">
+                                <div class="col-md-6  d-flex flex-row no-space">
+                                    <div class="emp-avatar">
+                                        <img src="/Contents/Images/Views/Employee/ImageHandler (2).png"/>
+                                    </div>
+                                    <div class="d-flex flex-column info-general-left ">
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Mã nhân viên <span
+                                                    class="text-primary">(*)</span></div>
+                                            <div class="emp-code">NV001</div>
+                                        </div>
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Họ và tên</div>
+                                            <div class="emp-code">Nguyễn Quốc Hùng</div>
+                                        </div>
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Giới tính</div>
+                                            <div class="emp-code">Nam</div>
+                                        </div>
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Ngày sinh</div>
+                                            <div class="emp-code">28/01/1997</div>
+                                        </div>
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Số CMND</div>
+                                            <div class="emp-code">017375648</div>
+                                        </div>
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Ngày cấp</div>
+                                            <div class="emp-code">22/06/2013</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-flex flex-row">
+                                    <div class="info-general-right">
+                                        <div class="d-flex flex-column info-general-left ">
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Nơi cấp</div>
+                                                <div class="emp-code">Hà Nội</div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Hộ chiếu</div>
+                                                <div class="emp-code"></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Vị trí công việc</div>
+                                                <div class="emp-code">Fresher Web</div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Đơn vị công tác</div>
+                                                <div class="emp-code">Trung tâm PTPM</div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Ngày thử việc</div>
+                                                <div class="emp-code">08/04/2019</div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Ngày chính thức</div>
+                                                <div class="emp-code">22/06/2019</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thông tin liên hệ -->
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="col-md-12 d-flex no-space" style="height:250px">
+                                <div class="col-md-6  d-flex flex-row no-space">
+                                    <div class="d-flex flex-column info-general-left ">
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Mã nhân viên</div>
+                                            <div class="emp-code">NV001</div>
+                                        </div>
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Họ và tên</div>
+                                            <div class="emp-code">Nguyễn Quốc Hùng</div>
+                                        </div>
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Giới tính</div>
+                                            <div class="emp-code">Nam</div>
+                                        </div>
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Ngày sinh</div>
+                                            <div class="emp-code">28/01/1997</div>
+                                        </div>
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Số CMND</div>
+                                            <div class="emp-code">017375648</div>
+                                        </div>
+                                        <div class="d-flex flex-row info-row">
+                                            <div class="info-row-label">Ngày cấp</div>
+                                            <div class="emp-code">22/06/2013</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-flex flex-row">
+                                    <div class="info-general-right">
+                                        <div class="d-flex flex-column info-general-left ">
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Mã nhân viên</div>
+                                                <div class="emp-code">NV001</div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Họ và tên</div>
+                                                <div class="emp-code">Nguyễn Quốc Hùng</div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Giới tính</div>
+                                                <div class="emp-code">Nam</div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Ngày sinh</div>
+                                                <div class="emp-code">28/01/1997</div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Số CMND</div>
+                                                <div class="emp-code">017375648</div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Ngày cấp</div>
+                                                <div class="emp-code">22/06/2013</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gia đình -->
+                        <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="col-md-12 d-flex flex-column no-space" style="height:250px">
+                                <!-- Phần header table -->
+                                <!-- Phần content table -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content phần Add Employee -->
+            <div class="content-add" style="display:none">
+                <!-- Phần block 1 -->
+                <div class="col-md-12 bg-white no-space">
+                    <div class="bread-cum d-flex">
+                        <div class=" col-md-7 d-flex flex-row pd-l-2">
+                            <div class="main-breadcum">Hồ sơ</div>
+                            <div class="icon-arrow-right"></div>
+                            <div class="small-breadcum">Thêm mới nhân viên</div>
+                        </div>
+                        <div class="col-md-5 d-flex flex-row no-space">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Kết thúc block1 Bắt đầu vẽ toolbar -->
+                <div class="col-md-12 no-space toolbar-add">
+                    <div class="toolbar d-flex flex-row">
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-save"
+                             tabindex="1">
+                            <div class="btn-action-icon icon-save"></div>
+                            <div class="btn-action-title">Cất</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center"
+                             id="btn-save-close" tabindex="2">
+                            <div class="btn-action-icon icon-save-close"></div>
+                            <div class="btn-action-title">Cất & Đóng</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" tabindex="3">
+                            <div class="btn-action-icon icon-delete"></div>
+                            <div class="btn-action-title">Cất & Thêm</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-undo"
+                             tabindex="4">
+                            <div class="btn-action-icon icon-undo"></div>
+                            <div class="btn-action-title">Hoãn</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" tabindex="5">
+                            <div class="btn-action-icon icon-email"></div>
+                            <div class="btn-action-title">Hoãn</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center"
+                             id="btn-detect" tabindex="6">
+                            <div class="btn-action-icon icon-detect"></div>
+                            <div class="btn-action-title">Nhận diện hồ sơ tự động</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" tabindex="7">
+                            <div class="btn-action-icon icon-setup-implicit"></div>
+                            <div class="btn-action-title">Thiết lập ngầm định</div>
+                            <div class="btn-action-icon icon-arrow-down"></div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" tabindex="8">
+                            <div class="btn-action-icon icon-help"></div>
+                            <div class="btn-action-title">Giúp</div>
+                            <div class="btn-action-icon icon-arrow-down"></div>
+                        </div>
+                        <div class="toolbar-line">|</div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" tabindex="9">
+                            <div class="btn-action-icon icon-reply"></div>
+                            <div class="btn-action-title">Phản hồi</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-close"
+                             tabindex="10">
+                            <div class="btn-action-icon icon-close"></div>
+                            <div class="btn-action-title">Đóng</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kết thúc toolbar , bắt đầu data-content -->
+                <div class="container-fluid " id="data-region">
+                    <!-- Phần border box chứa thông tin chung -->
+                    <div class="border-box">
+                        <!-- Phần thông tin chung  -->
+                        <div class="col-md-12 no-space d-flex flex-column  block-form" id="block-info-general">
+                            <div class="col-md-12 no-space  d-flex flex-row block-title">
+                                <div class="block-title-name">1. Thông tin chung</div>
+                                <div class="block-title-bg"></div>
+                            </div>
+                            <!-- Khối thông tin block 1 -->
+                            <div class="col-md-12 no-space d-flex flex-row block-content-first">
+                                <div class="d-flex no-space">
+                                    <div class="emp-avatar" style="padding-top:0;">
+                                        <img src="/Contents/Images/Views/Employee/ImageHandler (2).png"/>
+                                    </div>
+                                </div>
+                                <!-- Khối thông tin chung bên trái -->
+                                <div class="d-flex flex-row no-space" style="width:100%;">
+                                    <div class="col-md-6 d-flex flex-row no-space">
+                                        <div class="d-flex flex-column info-general-left " style="width:100%;">
+
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">CMT <span class="text-red">(*)</span></div>
+                                                <div class="emp-input"><input type="text"
+                                                                              class="input-border input-required"
+                                                                              name="cmt"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Họ và tên <span class="text-red">(*)</span>
+                                                </div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="hoten"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Giới tính</div>
+                                                <div class="emp-input input-filter">
+                                                    <input type="text" id="show-genderName" class="input-border"
+                                                           autocomplete="off" name="gioitinh"/>
+                                                    <div class="icon-arrow-down" id="btn-gender"></div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Ngày sinh</div>
+                                                <div class=" no-space emp-input col-md-2">
+                                                    <input type="text" class="input-border" placeholder="dd/mm/yyyy"
+                                                           name="ngaysinh"/>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Que Quan<span class="text-red">(*)</span>
+                                                </div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="quequan"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Email</div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="email"/></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Khối thông tin chung bên phải -->
+                                    <div class="col-md-6 d-flex flex-row">
+                                        <div class="info-general-right" style="width:100%;">
+                                            <div class="d-flex flex-column info-general-right ">
+                                                <div class="d-flex flex-row info-row">
+                                                    <div class="info-row-label">Dienthoai</div>
+                                                    <div class="emp-input"><input type="text" class="input-border"
+                                                                                  name="dienthoai"/></div>
+                                                </div>
+                                                <div class="d-flex flex-row info-row">
+                                                    <div class="info-row-label">Ngay tham gia</div>
+                                                    <div class="emp-input"><input type="text" class="input-border"
+                                                                                  name="ngaythamgia"/></div>
+                                                </div>
+                                                <div class="d-flex flex-row info-row">
+                                                    <div class="info-row-label">Tong tien <span
+                                                            class="text-red">(*)</span></div>
+                                                    <div class="d-flex flex-row" style="flex:1">
+                                                        <div class="emp-input input-filter">
+                                                            <input type="text" class="input-border" name="tongTien"
+                                                                   id="show-jobPosition"/>
+                                                            <div class="icon-arrow-down" id="btn-jobPosition"></div>
+                                                        </div>
+                                                        <div class="icon-more"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-add-config" style="display:none">
+                <!-- Phần block 1 -->
+                <div class="col-md-12 bg-white no-space">
+                    <div class="bread-cum d-flex">
+                        <div class=" col-md-7 d-flex flex-row pd-l-2">
+                            <div class="main-breadcum">Hồ sơ</div>
+                            <div class="icon-arrow-right"></div>
+                            <div class="small-breadcum">Thêm mới cấu hình</div>
+                        </div>
+                        <div class="col-md-5 d-flex flex-row no-space">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Kết thúc block1 Bắt đầu vẽ toolbar -->
+                <div class="col-md-12 no-space toolbar-add">
+                    <div class="toolbar d-flex flex-row">
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-save-config"
+                             tabindex="1">
+                            <div class="btn-action-icon icon-save"></div>
+                            <div class="btn-action-title">Cất</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center"
+                             id="btn-save-config close" tabindex="2">
+                            <div class="btn-action-icon icon-save-close"></div>
+                            <div class="btn-action-title">Cất & Đóng</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" tabindex="3">
+                            <div class="btn-action-icon icon-delete"></div>
+                            <div class="btn-action-title">Cất & Thêm</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-undo"
+                             tabindex="4">
+                            <div class="btn-action-icon icon-undo"></div>
+                            <div class="btn-action-title">Hoãn</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" tabindex="5">
+                            <div class="btn-action-icon icon-email"></div>
+                            <div class="btn-action-title">Hoãn</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center"
+                             id="btn-detect" tabindex="6">
+                            <div class="btn-action-icon icon-detect"></div>
+                            <div class="btn-action-title">Nhận diện hồ sơ tự động</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" tabindex="7">
+                            <div class="btn-action-icon icon-setup-implicit"></div>
+                            <div class="btn-action-title">Thiết lập ngầm định</div>
+                            <div class="btn-action-icon icon-arrow-down"></div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" tabindex="8">
+                            <div class="btn-action-icon icon-help"></div>
+                            <div class="btn-action-title">Giúp</div>
+                            <div class="btn-action-icon icon-arrow-down"></div>
+                        </div>
+                        <div class="toolbar-line">|</div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" tabindex="9">
+                            <div class="btn-action-icon icon-reply"></div>
+                            <div class="btn-action-title">Phản hồi</div>
+                        </div>
+                        <div class="btn-action d-flex flex-row justify-content-center align-items-center" id="btn-close"
+                             tabindex="10">
+                            <div class="btn-action-icon icon-close"></div>
+                            <div class="btn-action-title">Đóng</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kết thúc toolbar , bắt đầu data-content -->
+                <div class="container-fluid " id="data-region">
+                    <!-- Phần border box chứa thông tin chung -->
+                    <div class="border-box">
+                        <!-- Phần thông tin chung  -->
+                        <div class="col-md-12 no-space d-flex flex-column  block-form" id="block-info-general">
+                            <div class="col-md-12 no-space  d-flex flex-row block-title">
+                                <div class="block-title-name">1. Thêm cấu hình</div>
+                                <div class="block-title-bg"></div>
+                            </div>
+                            <!-- Khối thông tin block 1 -->
+                            <div class="col-md-12 no-space d-flex flex-row block-content-first">
+                                <!--<div class="d-flex no-space">-->
+                                    <!--<div class="emp-avatar" style="padding-top:0;">-->
+                                        <!--<img src="/Contents/Images//Employee/ImageHandler (2).png"/>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!-- Khối thông tin chung bên trái -->
+                                <div class="d-flex flex-row no-space" style="width:100%;">
+                                    <div class="col-md-6 d-flex flex-row no-space">
+                                        <div class="d-flex flex-column info-general-left " style="width:100%;">
+
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Hưu Trí <span class="text-red">(*)</span></div>
+                                                <div class="emp-input"><input type="text"
+                                                                              class="input-border input-required"
+                                                                              name="Tn_SDLD_HT"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Ốm và thai sản <span class="text-red">(*)</span>
+                                                </div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="Tn_SDLD_OD"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Tai Nạn Lao Động</div>
+                                                <div class="emp-input input-filter">
+                                                    <input type="text" id="show-genderName" class="input-border"
+                                                           autocomplete="off" name="Tn_SDLD_TNLD"/>
+                                                    <div class="icon-arrow-down" id="btn-gender"></div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">BH thất nghiệp</div>
+                                                <div class=" no-space emp-input col-md-2">
+                                                    <input type="text" class="input-border" placeholder="dd/mm/yyyy"
+                                                           name="Tn_SDLD_BHTN"/>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Baỏ hiểm y tế<span class="text-red">(*)</span>
+                                                </div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="Tn_SDLD_BHYT"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Lao động hưu trí</div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="Tn_LD_HT"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Lao động thất nghiệp</div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="Tn_LD_TN"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Lao động y tế</div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="Tn_LD_YT"/></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Khối thông tin chung bên phải -->
+                                    <div class="col-md-6 d-flex flex-row no-space">
+                                        <div class="d-flex flex-column info-general-left " style="width:100%;">
+
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Hưu Trí <span class="text-red">(*)</span></div>
+                                                <div class="emp-input"><input type="text"
+                                                                              class="input-border input-required"
+                                                                              name="Nn_SDLD_HT"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Ốm và thai sản <span class="text-red">(*)</span>
+                                                </div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="Nn_SDLD_OD"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Tai Nạn Lao Động</div>
+                                                <div class="emp-input input-filter">
+                                                    <input type="text" id="show-genderName" class="input-border"
+                                                           autocomplete="off" name="Nn_SDLD_TNLD"/>
+                                                    <div class="icon-arrow-down" id="btn-gender"></div>
+                                                </div>Mã nhân viên
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">BH thất nghiệp</div>
+                                                <div class=" no-space emp-input col-md-2">
+                                                    <input type="text" class="input-border" placeholder="dd/mm/yyyy"
+                                                           name="Nn_SDLD_BHTN"/>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Baỏ hiểm y tế<span class="text-red">(*)</span>
+                                                </div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="Nn_SDLD_BHYT"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Lao động hưu trí</div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="Nn_LD_HT"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">LĐ thất nghiệp</div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="Nn_LD_TN"/></div>
+                                            </div>
+                                            <div class="d-flex flex-row info-row">
+                                                <div class="info-row-label">Lao động y tế</div>
+                                                <div class="emp-input"><input type="text" class="input-border"
+                                                                              name="Nn_LD_YT"/></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Scripts/Lib/jquery.min.js"></script>
+<script src="/Scripts/Lib/bootstrap.min.js"></script>
+<script src="/Scripts/Lib/jquery-ui.js"></script>
+<script src="/Scripts/Common/Common.js"></script>
+<script src="/Scripts/Common/Autocomplete.js"></script>
+<script src="/Scripts/Common/Layout.js"></script>
+<script src="/Scripts/Dictionary/Employee/Employee.js"></script>
+<script src="/Scripts/Dictionary/Employee/Table.js"></script>
+<script src="/Scripts/Dictionary/Employee/Form.js"></script>
+
+</body>
+</html>

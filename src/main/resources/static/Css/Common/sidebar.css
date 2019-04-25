@@ -1,0 +1,121 @@
+﻿/*Created by NQHung - 4/4/2019*/
+/*Bắt đầu phần sidebar*/
+#sidebar {
+    width: 230px;
+    top: 44px;
+    left: 0;
+    bottom: 0;
+    background: #01579E;
+    overflow: auto;
+}
+/*Custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+    display: block;
+    overflow: auto;
+    height: 10px;
+    width: 10px;
+    background: #f0f0f0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #b5b5b5;
+}
+
+#sidebar .sidebar-item {
+    height: 40px;
+    width: 100%;
+}
+
+.sidebar-item:hover {
+    background-color: #0C68B4;
+}
+
+#sidebar .sidebar-item .sidebar-item-logo {
+    width: 24px;
+    height: 40px;
+    margin: 0 8px;
+}
+
+#sidebar .sidebar-item #category-item {
+    background: #014D8B;
+    font-size: 11px;
+    line-height: 40px;
+    font-weight: 300;
+    color: #ffffff !important;
+    width: 230px;
+    padding-left: 12px;
+}
+
+#sidebar .sidebar-item .logo-item-1 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_home_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-2 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_profile_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-3 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_cash_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-4 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_recruit_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-5 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_cup_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-6 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_approve_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-7 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_approve_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-8 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_report_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-9 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_quick_report_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-10 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_contact_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-11 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_email_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-12 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_trash_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-13 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_category_24.svg) no-repeat center center;
+}
+
+#sidebar .sidebar-item .logo-item-14 {
+    background: transparent url(/Contents/Icons/icon_Sidebar/HRM_Expand_ic_hethong.svg) no-repeat center center;
+}
+
+.sidebar-item-title {
+    height: 40px;
+    line-height: 40px;
+    color: #bfd5e7;
+}
+.col-misa-1{
+    width:210px;
+    border:1px solid #000;
+}

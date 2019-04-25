@@ -1,0 +1,177 @@
+﻿body{
+    overflow:hidden;
+}
+a{text-decoration:none}
+/*class reset margin padding*/
+.text-red {
+    color:red;
+}
+input:focus{
+    outline:none;
+    box-shadow:none;
+}
+.no-space {
+    margin:0;
+    padding:0;
+}
+pd-min{
+    padding:4px;
+}
+.pd-l-min {
+    padding-left: 4px;
+}
+
+.pd-r-min {
+    padding-right: 4px;
+}
+
+.pd-t-min {
+    padding-top: 4px;
+}
+
+.pd-b-min {
+    padding-bottom: 4px;
+}
+
+.pd-1{
+    padding:8px;
+}
+.pd-l-1{
+    padding-left:8px;
+}
+.pd-r-1 {
+    padding-right: 8px;
+}
+.pd-t-1 {
+    padding-top: 8px;
+}
+.pd-b-1{
+    padding-bottom:8px;
+}
+
+.pd-2 {
+    padding: 12px;
+}
+.pd-l-2 {
+    padding-left: 12px;
+}
+
+.pd-r-2 {
+    padding-right: 12px;
+}
+
+.pd-t-2 {
+    padding-top: 12px;
+}
+
+.pd-b-2 {
+    padding-bottom: 12px;
+}
+
+/*Icon mũi tên xuống*/
+.icon-arrow-down {
+    background: url(/Contents/Icons/Views/Employee/cbo-trigger.png) no-repeat;
+    width: 28px !important;
+    height: inherit;
+    background-position: center;
+
+}
+.icon-more {
+    background: url(/Contents/Icons/Common/more.png) no-repeat;
+    height: inherit;
+    background-position: center;
+    width: 28px;
+    border-radius: 0 3px 3px 0;
+    border-color: #d9d9d9;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+}
+/*CSS vi tri iconpicker*/
+img.ui-datepicker-trigger{
+    padding:3px 5px;
+}
+.icon-view-list {
+    background: url(/Contents/Icons/Views/Employee/icon_list_active.png) no-repeat;
+    width: 60px;
+    height: inherit;
+    background-position: center;
+}
+.icon-view-card {
+    background: url(/Contents/Icons/Views/Employee/icon_card.png) no-repeat;
+    width: 45px;
+    height: inherit;
+    background-position: center;
+}
+.icon-add {
+    background: url(/Contents/Icons/Common/add16.png) no-repeat; 
+}
+.icon-view-edit {
+    background: url(/Contents/Icons/Common/icon-show-detail.png) no-repeat;
+}
+.icon-delete {
+    background: url(/Contents/Icons/Common/icon-delete.png) no-repeat;
+}
+
+.icon-print {
+    background: url(/Contents/Icons/Common/print16.png) no-repeat;
+}
+
+.icon-email {
+    background: url(/Contents/Icons/Common/icon-send-email.png) no-repeat;
+}
+
+.icon-report {
+    background: url(/Contents/Icons/Common/icon-report.png) no-repeat;
+}
+
+.icon-refresh {
+    background: url(/Contents/Icons/Common/icon-refresh.png) no-repeat;
+}
+
+.icon-tool {
+    background: url(/Contents/Icons/Common/icon-utility.png) no-repeat;
+}
+
+.icon-reply {
+    background: url(/Contents/Icons/Common/icon-response.png) no-repeat;
+}
+
+.icon-help {
+    background: url(/Contents/Icons/Common/icon-help.png) no-repeat;
+}
+.icon-pin {
+    background: url(/Contents/Icons/Common/HRM_PIN.svg) no-repeat;
+}
+.icon-save {
+    background: url(/Contents/Icons/Common/icon-save.png) no-repeat;
+}
+.icon-save-close {
+    background: url(/Contents/Icons/Common/icon-save-insert.png) no-repeat;
+}
+.icon-save-close {
+    background: url(/Contents/Icons/Common/icon-save-insert.png) no-repeat;
+}
+.icon-undo {
+    background: url(/Contents/Icons/Common/icon-undo.png) no-repeat;
+}
+.icon-detect {
+    background: url(/Contents/Icons/Common/Trich_xuat_CV_PDF.png) no-repeat;
+}
+.icon-setup-implicit {
+    background: url(/Contents/Icons/Common/setting16.png) no-repeat;
+}
+.icon-close {
+    background: url(/Contents/Icons/Common/icon-close.png) no-repeat;
+}
+.icon-facebook {
+    background: url(/Contents/Icons/Common/Face16.png) no-repeat;
+    margin-left: 0;
+}
+.icon-skype {
+    background: url(/Contents/Icons/Common/Skype16.png) no-repeat;
+    margin-left: 0;
+}
+.icon-msn {
+    background: url(/Contents/Icons/Common/Msn16.png) no-repeat;
+    margin-left:0;
+}

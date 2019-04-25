@@ -1,0 +1,118 @@
+﻿
+body {
+}
+.bread-cum {
+    height:37px;
+    border-bottom:1px solid #c1c1c1;
+}
+    .bread-cum .main-breadcum {
+        color: #0277bd;
+        line-height: 34px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .bread-cum .icon-arrow-right {
+        background: url(/Contents/Icons/Views/Employee/arr_right.png) no-repeat;
+        width: 28px;
+        height: 34px;
+        background-position: center;
+    }
+    .bread-cum .small-breadcum {
+        color: #000;
+        ;
+        line-height: 34px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+/*CSS phần company box*/
+.company-box {
+    height: inherit;
+    width:330px;
+    border-left: 1px solid #c1c1c1;
+}
+    .company-box:active {
+        border-left: 1px solid #0277bd;
+    }
+    .company-box .company-icon {
+        width: 31px;
+        height: inherit;
+        background: url(/Contents/Icons/Views/Employee/tree.png) no-repeat;
+        background-position: center;
+    }
+    .company-box .company-name{
+        height:35px;
+        width:100%;
+        color:#000;
+        border:none;
+    }
+    .company-box .company-name:focus {
+        box-shadow: none;
+        outline:none;
+
+    }
+
+/* CSS phần trạng thái*/
+.status-bar {
+    width:185px;
+    border-left: 1px solid #c1c1c1;
+}
+.status-bar .company-name {
+    height: 35px;
+    width: 100%;
+    color: #000;
+    border: none;
+}
+
+    .status-bar .company-name:focus {
+        box-shadow: none;
+        outline: none;
+    }
+/*Kết thúc css block 1, Bắt đầu css Toolbar*/
+.toolbar{
+    height:32px;
+    border-bottom:1px solid #c1c1c1;
+}
+.btn-action {
+    width: auto;
+    height: inherit;
+    padding: 5px 2px 5px 2px;
+    box-sizing:border-box;
+}
+    .btn-action:hover {
+        background: #DEEEFB;
+        box-sizing: border-box;
+        cursor:pointer;
+    }
+.btn-action-icon {
+    width: 24px;
+    height: 16px;
+    padding: 4px 0;
+    background-position: center;
+}
+.btn-action-icon.icon-arrow-down{
+    width:16px;
+    padding:2px 5px;
+}
+    #btn-add {
+        padding-left: 16px;
+    }
+
+.btn-action-title {
+    color:#000;
+    padding:0px 6px;
+}
+.toolbar-line{
+    color:#c1c1c1;
+    line-height:30px;
+    padding:0 2px;
+}
+.content-wrap{
+    left:230px;
+    right:0;
+    bottom:0;
+    top:44px;
+    min-width:796px;
+}
+.content-list{
+    height:70px;
+}

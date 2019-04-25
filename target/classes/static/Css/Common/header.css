@@ -1,0 +1,141 @@
+﻿/*CSS phần header 
+  Created by NQHung - 04/04/2019
+*/
+@font-face {
+    font-family: Helvetica;
+    src: url(/Contents/Fonts/helveticaneue.ttf);
+}
+body{
+    font-family:Helvetica;
+    font-size:13px;
+    color:#fff;
+}
+/*CSS Phần Header*/
+#header {
+    height: 44px;
+}
+
+    #header #header-left {
+        height: 100%;
+        width: 230px;
+        background: #01579E;
+    }
+
+        #header-left #h-icon-toogle {
+            width: 44px;
+            height: 44px;
+            background-image: url(/Content/Icons/icon_Header/icon_Menu_app-Menu_ung_dung.png);
+            background-position:center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #header-left #h-icon-toogle:hover{
+            background-color: #0C68B4;
+        }
+
+        #header-left #h-icon-logo {
+            background: url(/Contents/Icons/icon_Header/Logo.png) no-repeat;
+            height: 36px;
+            width: 160px;
+            position: absolute;
+            top: 0;
+            left: 36px;
+            margin: 5px 8px;
+            -webkit-background-size: 110px;
+            background-size: 110px;:
+        }
+        #header-left #h-icon-show {
+            background: url(/Contents/Icons/icon_Header/icon_Menu_app-Menu_ung_dung.png) no-repeat;
+            height: 32px;
+            width: 32px;
+            position: absolute;
+            top: 10px;
+            left:186px;
+            margin: 4px;
+        }
+
+    #header #header-right {
+        height: 100%;
+        flex:1;
+        background: #0C68B4;
+
+    }
+.no-space{
+    padding:0;
+    margin:0;
+}
+/*Bắt đầu css phần form search*/
+#header-right #form-search {
+    height: 30px;
+    margin: 8px 16px;
+    background: #0a589a;
+    color:#fff;
+}
+#form-search #input-search {
+    border:none;
+    background:transparent;
+    height:26px;
+    box-sizing:border-box;
+    color:#fff;
+}
+#form-search #input-search:focus {
+    outline: 0px !important;
+    box-shadow: none;
+}
+    #header-right .icon-search {
+        width: 22px;
+        height: 22px;
+        margin: 8px;
+        background: url("/Contents/Icons/icon_Header/search.png") no-repeat;
+    }
+    #header-right .icon-setting {
+        width: 22px;
+        height: 22px;
+        margin: 5px;
+        background:url("/Contents/Icons/icon_Header/qs-setting.png") no-repeat;
+    }
+::placeholder {
+        color: #fff!important;
+        font-size:13px;
+        line-height:28px;
+        margin-left:0;
+    }
+/*kết thúc phần form search*/
+
+/*Button Back Version*/
+button.back-version {
+    font-size: 13px;
+    height: 30px;
+    background: #0a589a;
+    color: #fff;
+    justify-content: center;
+    align-content: center;
+    margin: 6px 0;
+    width:190px;
+}
+    button.back-version:hover {
+        background: #fff;
+        color: #0c68b5;
+        font-size:13px;
+        line-height:26px;
+    }
+/*Notification*/
+#notification {
+    background:url(/Contents/Icons/icon_Header/notification.png) no-repeat;
+    width:50px;
+    height:44px;
+    align-items:center;
+    justify-content:center;
+    background-position:center;
+}
+/*Avatar*/
+.avatar {
+    background: url('/Contents/Icons/icon_Header/ImageHandler.png')no-repeat;
+    width:44px;
+    background-size:27px;
+    height:44px;
+    background-position:center;
+    border-radius:50%;
+}
+    /*End Phần Header*/
