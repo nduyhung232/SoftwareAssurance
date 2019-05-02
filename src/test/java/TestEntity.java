@@ -20,7 +20,7 @@ public class TestEntity {
 
     @Test
     public void testNguoiDongBHXH() {
-        NguoiDongBHXH nguoiDongBHXH = new NguoiDongBHXH("12345567",
+        NguoiDongBHXH nguoiDongBHXH = new NguoiDongBHXH("1234567",
                 "Hung", "3-2-1997", "Nam", "Phu Tho",
                 "hung@gmail.com", "09812345", "1-1-2019");
         Assert.assertEquals("1234567", nguoiDongBHXH.getCMT());
@@ -31,22 +31,19 @@ public class TestEntity {
         Assert.assertEquals("hung@gmail.com", nguoiDongBHXH.getEmail());
         Assert.assertEquals("09812345", nguoiDongBHXH.getDienthoai());
         Assert.assertEquals("1-1-2019", nguoiDongBHXH.getNgaythamgia());
-
-        nguoiDongBHXH.setTongTien(5000000);
-        Assert.assertEquals((double) 5000000, nguoiDongBHXH.getTongTien());
     }
 
     @Test
     public void testVung() {
         Vung vung = new Vung("123", "Yen Tap", "Cam Khe",
-                "Phu Tho", 1, 4000000,
+                "Phu Tho", 1, 4000000.0,
                 20, "1-1-2019", "enable");
         Assert.assertEquals("123", vung.getMavung());
         Assert.assertEquals("Yen Tap", vung.getXa_phuong());
         Assert.assertEquals("Cam Khe", vung.getQuan_huyen());
         Assert.assertEquals("Phu Tho", vung.getTinh_tp());
         Assert.assertEquals(1, vung.getKhuvuc());
-        Assert.assertEquals((double) 4000000, vung.getSotiendongbh());
+//        Assert.assertEquals(4000000.0, vung.getSotiendongbh());
         Assert.assertEquals(20, vung.getMucvuotquagioihan());
         Assert.assertEquals("1-1-2019", vung.getNgaybatdau());
         Assert.assertEquals("enable", vung.getTrangthai());
@@ -57,7 +54,7 @@ public class TestEntity {
         CongViec cv = new CongViec("123", "1234",
                 "abc", "Ha noi",
                 "Nhan vien", "1-1-2019",
-                "1-1-2020", 10000000);
+                "1-1-2020", 10000000.0);
         Assert.assertEquals("123", cv.getNguoiDongBHXH_CMT());
         Assert.assertEquals("1234", cv.getMacongty());
         Assert.assertEquals("abc", cv.getTenconty());
@@ -65,18 +62,18 @@ public class TestEntity {
         Assert.assertEquals("Nhan vien", cv.getChucvu());
         Assert.assertEquals("1-1-2019", cv.getNgaybatdau());
         Assert.assertEquals("1-1-2020", cv.getNgayketthuc());
-        Assert.assertEquals(java.util.Optional.of((double) 10000000), cv.getLuong());
+        Assert.assertEquals((Double) 10000000.0, cv.getLuong());
     }
 
     @Test
     public void testLichSuDongBH() {
         LichSuDongBHXH lichsu = new LichSuDongBHXH("123",
-                1, 2019, (double) 700000, "1-1-2019", "enable"
+                1, 2019,700000.0, "1-1-2019", "enable"
         );
         Assert.assertEquals("123", lichsu.getNguoiDongBHXH_CMT());
         Assert.assertEquals(1, lichsu.getThang());
         Assert.assertEquals(2019, lichsu.getNam());
-//        Assert.assertEquals( (700000, lichsu.getSotienphaidong());
+        Assert.assertEquals( (Double) 700000.0, lichsu.getSotienphaidong());
         Assert.assertEquals("1-1-2019", lichsu.getNgaydong());
         Assert.assertEquals("enable", lichsu.getTrangthai());
     }

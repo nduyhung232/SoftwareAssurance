@@ -1,4 +1,4 @@
-package com.hung.daos;
+package com.hung.daos.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

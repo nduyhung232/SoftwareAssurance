@@ -1,7 +1,7 @@
 package com.hung.daos;
 
+import com.hung.daos.config.Config;
 import com.hung.entities.LichSuDongBHXH;
-import com.hung.entities.MucDongBHXH;
 import com.hung.entities.NguoiDongBHXH;
 import com.hung.entities.NguoiDongBH_LichSu;
 //import org.testng.Assert;
@@ -28,10 +28,6 @@ public class ThongKe_DAO {
         try {
             ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-
-            boolean check = false;
-            ResultSet rs2 = rs;
-           // Assert.assertEquals(true,rs2.next());
 
             while (rs.next()) {
                 NguoiDongBHXH nguoiDongBHXH = new NguoiDongBHXH(
@@ -64,10 +60,6 @@ public class ThongKe_DAO {
             ps.setString(1, cmt);
             rs = ps.executeQuery();
 
-            boolean check = false;
-            ResultSet rs2 = rs;
-            //Assert.assertEquals(true,rs2.next());
-
             while (rs.next()) {
                 nguoi = new NguoiDongBHXH(
                         rs.getString(1),
@@ -93,10 +85,6 @@ public class ThongKe_DAO {
             ps = conn.prepareStatement(sql2);
             ps.setString(1, cmt);
             rs = ps.executeQuery();
-
-            boolean check = false;
-            ResultSet rs2 = rs;
-            //Assert.assertEquals(true,rs2.next());
 
             while (rs.next()) {
                 list.add(new LichSuDongBHXH(
@@ -124,10 +112,6 @@ public class ThongKe_DAO {
             ps2.setString(2, "true");
             ResultSet rs2 = ps2.executeQuery();
 
-            boolean check = false;
-            ResultSet rs3 = rs;
-           // Assert.assertEquals(true,rs3.next());
-
             while (rs2.next()) {
                 tong += rs2.getDouble("tongtien");
             }
@@ -154,7 +138,6 @@ public class ThongKe_DAO {
             ps.setString(9, String.valueOf(nguoiDongBHXH.getTongTien()));
 
             check = ps.execute();
-            //Assert.assertEquals(true,check);
 
         } catch (SQLException e) {
             e.printStackTrace();
