@@ -1,11 +1,20 @@
 ﻿.content-add{
     display:none;
     z-index:10;
-    position:absolute;
-    left:0;
-    right:0;
-    top:0;
-    bottom:20px;
+    left: 230px;
+    right: 0;
+    top: 44px;
+    min-width: 796px;
+    position: absolute;
+}
+.content-add-config{
+    display:none;
+    z-index:10;
+    left: 230px;
+    right: 0;
+    top: 44px;
+    min-width: 796px;
+    position: absolute;
 }
 #data-region {
     overflow: auto;

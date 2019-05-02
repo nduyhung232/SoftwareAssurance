@@ -4,7 +4,7 @@
 $(document).ready(function () {
     //Thực hiện Load dữ liệu lên bảng
     employeeJS.LoadDataConfig();
-    // employeeJS.LoadData();
+     //employeeJS.LoadData();
 
 });
 //Class đối tượng nhân viên
